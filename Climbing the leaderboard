@@ -1,0 +1,14 @@
+scores=[100,100,50,40,40,20,10]
+alice=[5,25,50,120]
+scores=sorted(list(set(scores)),reverse=True)
+alice=sorted(alice,reverse=True)
+result=[]
+j=0
+l=len(scores)
+ll=len(alice)
+for i in range(ll):
+    while (j<l) and alice[i]<scores[j]:
+        j=j+1
+    result.append(j+1)
+
+print(result[::-1])
