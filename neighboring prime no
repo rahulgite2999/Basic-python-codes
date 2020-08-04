@@ -1,0 +1,35 @@
+n = int(input("how many no"))
+ar = []
+
+u = 1
+
+for i in range(0, n):
+    a = int(input(""))
+    ar.append(a)
+
+print(ar)
+u=0
+for l in range(0, len(ar)):
+
+    c=[]
+    for i in range(2, ar[u] + 7):
+        for j in range(2, i):
+            if (i % j == 0):
+                break
+        else:
+            c.append(i)
+
+    print(c)
+
+    if ar[u] in c:
+
+        g = c.index(ar[u])
+        print(c[g - 1], c[g + 1])
+    else:
+        if (c[-1] > ar[0] and c[-2] < ar[0]):
+            print(c[-1], c[-2])
+        else:
+            print(c[-2], c[-3])
+
+
+    u = u + 1
